@@ -1,0 +1,15 @@
+.Character {
+  background-color: #D1C3A9;
+  border-radius: 2px;
+  box-shadow: -3px 3px 0 0 rgba(0,0,0,0.60);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 46px;
+  line-height: 46px;
+  margin: 16px 16px 0 0;
+  border: 1px solid #BFB4A3;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40px;
+}
