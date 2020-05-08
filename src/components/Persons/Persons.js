@@ -8,18 +8,32 @@ class Persons extends Component {
   //   return state;
   // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('[Person.js] shouldComponentUpdate');
-    return true;
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log('[Person.js] shouldComponentUpdate');
+  //   if (
+  //     nextProps.persons !== this.props.persons ||
+  //     nextProps.changed !== this.props.changed ||
+  //     nextProps.clicked !== this.props.clicked
+  //   ){
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('[Person.js] getSnapshotBeforeUpdate');
+    return { message: 'Snapshot!'};
   }
 
-  getSnapShotBeforeUpdate(prevProps, prevState) {
-    console.log('[Person.js] getSnapShotBeforeUpdate');
-    return null;
-  }
-
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('[Person.js] componentDidUpdate')
+    console.log(snapshot);
+  }
+
+  componentWillUnmount() {
+    console.log('[Persons.js] componentWillUnmount');
   }
 
   render() {
